@@ -2,21 +2,24 @@ Avrae Cheat Sheet
 
 `======= Table of Contents =======`
 1. The Basics: <Message URL>
-2. Checks, Saves, Attacks, Spells: <Message URL>
-3. Basic Combat: <Message URL>
-4. Advanced Combat: <Message URL>
-5. DM Specific Commands: <Message URL>
+2. Character Management
+3. Checks, Saves, Attacks, Spells: <Message URL>
+4. Basic Combat: <Message URL>
+5. Advanced Combat: <Message URL>
+6. DM Specific Commands: <Message URL>
 `=================================`
 
 1. __**The Basics**__
 
 **Command Format**
 All Avrae commands follow this format:
-`!command argument [optional argument] <required argument>`
+`!command argument [optional argument] <required argument> "argument with spaces"`
 
 An Exclamation point followed by the name of the command you wish to run, then a space and any "arguments" for that command. An argument is typically a modifier for the command you're running.
 
-Arguments surrounded by [square brackets] are optional, while those surrounded by <angled brackets> are required.
+Arguments surrounded by [square brackets] are optional, while those surrounded by <angled brackets> are required. **Do not include the brackets when you actually run the command**, they are for informational purposes in help text only.
+
+Arguments with spaces (such as spell names) should be wrapped in quotation marks.
 
 Most official Avrae commands (those described in `!help`) have a long and short version. For example you can roll a stealth check by running either `!check stealth` or `!c stealth`. These will be represented in the format `![check|c]`.
 
@@ -45,7 +48,7 @@ Similar to an Alias, a Snippet is a User-made argument. Like Aliases, Snippets c
 
 **Lookup**
 These commands can be used to look up Items, Spells, Rules, and more.
-
+`!item <item name>` | `!spell <spell name>` | `!classfeat <class feature>`
 See `!help` for a full list.
 
 
@@ -62,15 +65,58 @@ Examples include:
 
 
 
-2. __**Checks, Saves, Attacks, Spells**__
+2. __**Character Management**__
+
+**Selecting a Character**
+`!char <character name>`
+
+**Update from your Linked Character Sheet**
+`!update`
+
+**Modify your HP**
+`!g hp +/- #`
+
+
+
+3. __**Checks, Saves, Attacks, Spells**__
 
 Note: Many arguments can be abbreviated and Avrae will use the closest match. For example:
-!save Dexterity = !save dex
+`!save Dexterity` = `!save dex`
 
-Making an Ability Check
-![check|c] <ability|skill> [ability]
-ex: !c strength | !c acrobatics | !c nature wisdom
+**Making an Ability Check**
+`![check|c] <ability|skill> [ability]`
+ex: `!c strength` | `!c acrobatics` | `!c nature wisdom`
 
-Making a Save
-![save|s] <ability>
-ex: !s dexterity
+**Making a Save**
+`![save|s] <ability>`
+ex: `!s dexterity`
+
+**Making an Attack**
+`![attack|a] <attack name>`
+ex: `!a dagger`
+Note: `!a list` to show all attacks from your current character.
+
+**Casting a Spell**
+`!cast <spell name>`
+ex: `!cast "Magic Missile"`
+
+Common arguments are:
+`!cast fireball -l #` (lowercase L) - Casts the spell at given level
+`!cast fireball -i` Casts the spell without using a slot, even if you don't know the spell
+`!cast hex noconc` Casts the spell without concentration, useful for reapplying spells like Hex that can be moved around
+
+
+4. __**Basic Combat**__
+
+**Joining an Existing Combat**
+`![init|i] <join>`
+ex: `!i join`
+
+**Attacking a Target**
+`![init|i] [attack|a] <attack name> <-t target name>`
+ex: `!i a dagger -t goblin`
+
+**Casting a Spell at a Target or Targets**
+`![init|i] <cast> <spell name> <-t target name> [-t target name] [-t target name]...`
+ex: `!i cast bless -t jim -t billy -t mary`
+
