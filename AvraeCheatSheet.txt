@@ -74,9 +74,15 @@ Examples include:
 `!update`
 
 **Modify your HP**
-`!g hp +/- #`
+`![game|g] hp [+|-]#`
 
+**Modify Spell Slots**
+`![game|g] [spellslot|ss] <slot level> [+|-]#`
+ex: `!g ss 2 +1` - Restore one 2nd level slot
 
+**Resting**
+`![game|g] [shortrest|sr]`
+`![game|g] [longrest|lr]`
 
 3. __**Checks, Saves, Attacks, Spells**__
 
