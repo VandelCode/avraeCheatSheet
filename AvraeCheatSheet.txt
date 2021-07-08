@@ -1,0 +1,82 @@
+Avrae Cheat Sheet
+
+The Basics:
+<Message URL>
+
+Checks, Saves, Attacks, Spells:
+<Message URL>
+
+Basic Combat:
+<Message URL>
+
+Advanced Combat:
+<Message URL>
+
+DM Specific Commands:
+<Message URL>
+
+The Basics
+
+Command Format
+All Avrae commands follow this format:
+!command argument [optional argument] <required argument>
+
+An Exclamation point followed by the name of the command you wish to run, then a space and any "arguments" for that command. An argument is typically a modifier for the command you're running.
+
+Arguments surrounded by [square brackets] are optional, while those surrounded by <angled brackets> are required.
+
+Most official Avrae commands (those described in !help) have a long and short version. For example you can roll a stealth check by running either !check stealth or !c stealth. These will be represented in the format ![check|c].
+
+
+
+Help
+Avrae will DM you information about the specified command.
+!help <command name>
+ex: !help check
+
+Aliases
+User-made commands for Avrae are known as Aliases. They are used in the same way as any official command, and often contain their own help text accessible with !aliasname help.
+
+There are two levels of Alias: Personal Aliases and Server Aliases.
+
+A Personal Alias is one that you have created yourself, copied from another player, or subscribed to on the Avrae Workshop.
+
+A Server Alias is one added at the Server level, which all players on the server can access, whether they have it as a Personal Alias or not.
+
+A Personal Alias will take precedence over a Server Alias, if they are different in any way.
+
+Snippets
+
+Similar to an Alias, a Snippet is a User-made argument. Like Aliases, Snippets can be either Personal or Server.
+
+
+Lookup
+These commands can be used to look up Items, Spells, Rules, and more.
+
+See !help for a full list.
+
+Common Arguments
+
+Some arguments that are built into Avrae can be used for many different commands.
+
+Examples include:
+adv Make a roll with Advantage
+dis Make a roll with Disadvantage
+ea Make an attack roll with Elven Accuracy
+-b # Add a bonus to a roll
+-d # Add extra damage to a roll
+-rr # Roll multiple times
+
+
+Checks, Saves, Attacks, Spells
+
+Note: Many arguments can be abbreviated and Avrae will use the closest match. For example:
+!save Dexterity = !save dex
+
+Making an Ability Check
+![check|c] <ability|skill> [ability]
+ex: !c strength | !c acrobatics | !c nature wisdom
+
+Making a Save
+![save|s] <ability>
+ex: !s dexterity
