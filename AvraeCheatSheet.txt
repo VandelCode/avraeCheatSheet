@@ -229,17 +229,21 @@ In combat, the `!map` alias is a powerful tool for keeping track of where combat
 
 __For Players__
 
-`!map` - Shows the current Map
+**View the Map**
+`!map`
 
+**Create and Edit Tokens**
 `!map -t <target> [args]` - Edits a token on the map in some way. Args include:
   `-move <coordinate>` - Places a combatant's token or moves it to the specified coordinate
   `-size [T|S|M|L|H|G]` - Sets the size of the combatant's token.
   `-color [color code]` - Sets the color of the token. Color codes can be found in `!map help`.
   `-height <# in feet>` - Sets the token's height, represented by a comment above the map image.
-  
+
+**Generate a Token Image**
 `!tokenimport <image URL>` and `!map -t <target> -token <shortcode>`
 Generate a 'shortcode' from an image URL, then use that shortcode to add an image to a token.
 
+**Move a Token**
 `!move <coordinate> [-t target]`
 Moves your character's token to the specified coordinates, or moves the targeted token if `-t` is supplied. Same as running `!map -t <target> -move <coordinate>`
 
@@ -248,9 +252,19 @@ An interesting command for handling complex movements, or when you know how far 
 ex: `!go 20n` Move your character's token 20 feet north.
 ex: `!go 5n5nw10e10s -t goblin` Moves the token "goblin" 5 feet north, 5 feet northwest, 10 feet east, then 10 feet south.
 
+**Adjust the Map View**
 `!view <topleft coordinate>:<bottom right coordinate>`
 Zooms the map to show only the space between the specified coordinates.
 If you're a player, please ask your DM before running this command.
+
+**Display Area Spell Effects**
+`!se <name of spell> [aim] [-t target] [-n]`
+Creates an Overlay on the map, based on a preset list of spells.
+`<name of spell>` Must be enclosed in quotation marks if it includes spaces
+`[aim]` is the point where you are placing the overlay, either a coordinate or the name of a creature
+`[-t target]` is used in this context to attach the overlay settings to a different combatant than your current one. If for some reason your character creates an overlay when it is not their turn, use this to target your character.
+`[-n]` prevents the overlay settings from attaching, useful for showing the area of instantaneous effects like a Fireball.
+ex: `!se "Cone of Cold" goblin1 -n` - Displays an overlay for Cone of Cold, emitting from your character's coordinate towards "goblin1's" coordinate. The overlay will not persist the next time the map is shown.
 
 
 __For DMs__
