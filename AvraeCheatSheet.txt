@@ -1,31 +1,227 @@
 Avrae Cheat Sheet
 
-`======= Table of Contents =======`
+`=================================`
 1. The Basics: <Message URL>
-2. Checks, Saves, Attacks, Spells: <Message URL>
-3. Basic Combat: <Message URL>
-4. Advanced Combat: <Message URL>
+2. Character Management
+3. Checks, Saves, Attacks, Spells: <Message URL>
+4. Basic Combat: <Message URL>
 5. DM Specific Commands: <Message URL>
+6. Combat Maps: <Message URL>
+7. Custom Aliases and Snippets <Message URL>
 `=================================`
 
 1. __**The Basics**__
 
 **Command Format**
 All Avrae commands follow this format:
-`!command argument [optional argument] <required argument>`
+`!command argument [optional argument] <required argument> "argument with spaces"`
 
 An Exclamation point followed by the name of the command you wish to run, then a space and any "arguments" for that command. An argument is typically a modifier for the command you're running.
 
-Arguments surrounded by [square brackets] are optional, while those surrounded by <angled brackets> are required.
+Arguments surrounded by [square brackets] are optional, while those surrounded by <angled brackets> are required. **Do not include the brackets when you actually run the command**, they are for informational purposes in help text only.
+
+Arguments with spaces (such as spell names) should be wrapped in quotation marks.
 
 Most official Avrae commands (those described in `!help`) have a long and short version. For example you can roll a stealth check by running either `!check stealth` or `!c stealth`. These will be represented in the format `![check|c]`.
 
-
 **Help**
-Avrae will DM you information about the specified command.
+Avrae will DM you information about the specified command, or general information if no argument is supplied..
+`!help`
 `!help <command name>`
 ex: `!help check`
 
+**Lookup**
+These commands can be used to look up Items, Spells, Rules, and more.
+`!item <item name>` | `!spell <spell name>` | `!classfeat <class feature>`
+See `!help` for a full list.
+
+**Common Arguments**
+Some arguments that are built into Avrae can be used for many different commands.
+
+Examples include:
+`adv` Make a roll with Advantage
+`dis` Make a roll with Disadvantage
+`ea` Make an attack roll with Elven Accuracy
+`-b #` Add a bonus to a roll
+`-d #` Add extra damage to a roll
+`-rr #` Roll multiple times (usually Extra Attack)
+
+
+
+2. __**Character Management**__
+
+**Selecting a Character**
+`!char <character name>`
+
+**Update from your Linked Character Sheet**
+`!update`
+
+**Modify your HP**
+`![game|g] hp [+|-]#`
+
+**Modify Spell Slots**
+`![game|g] [spellslot|ss] <slot level> [+|-]#`
+ex: `!g ss 2 +1` - Restore one 2nd level slot
+
+**Resting**
+`![game|g] [shortrest|sr]`
+`![game|g] [longrest|lr]`
+
+
+
+3. __**Checks, Saves, Attacks, Spells**__
+
+Note: Many arguments can be abbreviated and Avrae will use the closest match. For example:
+`!save Dexterity` = `!save dex`
+
+**Making an Ability Check**
+`![check|c] <ability|skill> [ability]`
+ex: `!c strength` | `!c acrobatics` | `!c nature wisdom`
+
+**Making a Save**
+`![save|s] <ability>`
+ex: `!s dexterity`
+
+**Making an Attack**
+`![attack|a] <attack name>`
+ex: `!a dagger`
+Note: `!a list` to show all attacks from your current character.
+
+**Casting a Spell**
+`!cast <spell name>`
+ex: `!cast "Magic Missile"`
+
+Common arguments are:
+`!cast fireball -l #` (lowercase L) - Casts the spell at given level
+`!cast fireball -i` Casts the spell without using a slot, ignoring all other requirements
+`!cast hex noconc` Casts the spell without concentration, useful for reapplying spells like Hex that can be moved around
+
+
+4. __**Combat**__
+
+**Joining an Existing Combat**
+`![init|i] <join>`
+ex: `!i join`
+
+**Attack a Target**
+`![init|i] [attack|a] <attack name> <-t target name>`
+ex: `!i a dagger -t goblin`
+
+**Cast a Spell at a Target or Targets**
+`![init|i] <cast> <spell name> <-t target name> [-t target name] [-t target name]...`
+ex: `!i cast bless -t jim -t billy -t mary`
+
+**Attack of Opportunity**
+`![init|i] aoo <attacker> <attack> <-t target>`
+ex: `!i aoo jim dagger -t goblin`
+
+**Cast a Spell as a Reaction**
+`![init|i] [reactcast|rc] <caster> <spell> [-t target]`
+ex: `!i rc billy "hellish rebuke" -t goblin`
+
+**End your Turn**
+`![init|i] [next|n]`
+__Remember to end your turn when you are done!__
+
+**Create an Effect**
+`![init|i] effect <target> <effect name> [args]
+See `!help i effect` for information. Used to add a condition or other effect to a target when such an effect is not added automatically by the spell or attack that caused it.
+
+**Remove an Effect**
+`![init|i] re <target> [effect]`
+ex: `!i re jim prone`
+If no `[effect]` is provided, all effects will be removed from the target.
+
+**Edit a Combatant's Options**
+`![init|i] opt [args]`
+See `!help i opt` for information. Used to set options such as Initiative placement, name, ac, max and current hp, etc.
+
+
+5. __**DM Specific Commands**__
+
+**Begin Combat**
+`![init|i] begin`
+
+**Add Monsters to Combat**
+`![init|i] madd <monster name> [args]`
+Common args include `-n #` to add multiple and `-name <name>` to name the creature(s). Add `#` at the end of the custom name to automatically number them.
+ex: `!i madd golin -n 5 -name Goblin#`
+
+**Make Checks and Saves as Monsters**
+`![init|i] [check|save] [skill|ability]`
+Makes a check as the combatant whose turn it is in initiative.
+ex: `!i check perception` | `!i save wis`
+To make a save or check for one combatant while it's another combatant's turn, use `!i oc <name> <check>` or `!i os <name> <save>`
+
+**View a Monster's Attacks**
+'[init|i] a list`
+Shows a list of the current combatant's attacks. If the combatant is a monster, DMs you the list instead of posting in the combat channel.
+
+**Move Initiative**
+`![init|i] move [name|initiative count]`
+Moves to the specified combatant or initiative count's turn.
+
+`![init|i] prev`
+Moves to the previous combatant's turn.
+
+**Remove a Combatant from Initiative**
+`![init|i] remove <name>`
+Cannot be used on the combatant's turn who is being removed. Dead creatures are removed automatically at the end of their next turn following their death.
+
+**Reroll Initiative**
+`![init|i] reroll`
+Rerolls the initiative counts of all combatants. Useful for starting a 'new' combat while keeping the same Map loaded (more on this later)
+
+
+
+6. __**Combat Maps**__
+
+In combat, the `!map` alias is a powerful tool for keeping track of where combatants are in relation to each other, and can help to immerse players by providing a visual aid.
+
+`!map` is a very complex command and will take some time to learn. See `!map help` for full details. Some basics will be covered below.
+
+__For Players__
+
+`!map` - Shows the current Map
+
+`!map -t <target> [args]` - Edits a token on the map in some way. Args include:
+  `-move <coordinate>` - Places a combatant's token or moves it to the specified coordinate
+  `-size [T|S|M|L|H|G]` - Sets the size of the combatant's token.
+  `-color [color code]` - Sets the color of the token. Color codes can be found in `!map help`.
+  `-height <# in feet>` - Sets the token's height, represented by a comment above the map image.
+  
+`!tokenimport <image URL>` and `!map -t <target> -token <shortcode>`
+Generate a 'shortcode' from an image URL, then use that shortcode to add an image to a token.
+
+`!move <coordinate> [-t target]`
+Moves your character's token to the specified coordinates, or moves the targeted token if `-t` is supplied. Same as running `!map -t <target> -move <coordinate>`
+
+`!go <distance and direction[distance and direction...]> [-t target]`
+An interesting command for handling complex movements, or when you know how far and what direction you want to move, but you can't read the map coordinates. Movements can be chained.
+ex: `!go 20n` Move your character's token 20 feet north.
+ex: `!go 5n5nw10e10s -t goblin` Moves the token "goblin" 5 feet north, 5 feet northwest, 10 feet east, then 10 feet south.
+
+`!view <topleft coordinate>:<bottom right coordinate>`
+Zooms the map to show only the space between the specified coordinates.
+If you're a player, please ask your DM before running this command.
+
+
+__For DMs__
+
+When setting up a map, you need to have a combatant in initiative for the `!map` alias to save the current setting to.
+This combatant must be named any of "Map", "DM", or "Lair".
+A common workflow when beginning combat with a map might look like this:
+`!i begin` - Start combat
+`!i add 0 Map -p 30` - Add a combatant named "Map" at initiative 30
+`!map -loadmap Forest` - Loads all the settings for a premade map named "Forest"
+Note: `!map -maplist` will show a list of several premade maps, ready to be loaded.
+
+There are far more commands that `!map` can perform than are practical to list here. Browse the `!map help` text, and if you have any questions feel free to ask your fellow DMs.
+
+A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>.
+
+
+7. __**Custom Aliases and Snippets**__
 
 **Aliases**
 User-made commands for Avrae are known as Aliases. They are used in the same way as any official command, and often contain their own help text accessible with `!aliasname help`.
@@ -42,35 +238,3 @@ A Personal Alias will take precedence over a Server Alias, if they are different
 **Snippets**
 Similar to an Alias, a Snippet is a User-made argument. Like Aliases, Snippets can be either Personal or Server.
 
-
-**Lookup**
-These commands can be used to look up Items, Spells, Rules, and more.
-
-See `!help` for a full list.
-
-
-**Common Arguments**
-Some arguments that are built into Avrae can be used for many different commands.
-
-Examples include:
-`adv` Make a roll with Advantage
-`dis` Make a roll with Disadvantage
-`ea` Make an attack roll with Elven Accuracy
-`-b #` Add a bonus to a roll
-`-d #` Add extra damage to a roll
-`-rr #` Roll multiple times
-
-
-
-2. __**Checks, Saves, Attacks, Spells**__
-
-Note: Many arguments can be abbreviated and Avrae will use the closest match. For example:
-!save Dexterity = !save dex
-
-Making an Ability Check
-![check|c] <ability|skill> [ability]
-ex: !c strength | !c acrobatics | !c nature wisdom
-
-Making a Save
-![save|s] <ability>
-ex: !s dexterity
