@@ -1,13 +1,13 @@
 Avrae Cheat Sheet
 
 `=================================`
-1. The Basics: <Message URL>
-2. Character Management
+1. __The Basics__: <Message URL>
+2. Character Management <Message URL>
 3. Checks, Saves, Attacks, Spells: <Message URL>
-4. Basic Combat: <Message URL>
+4. Combat: <Message URL>
 5. DM Specific Commands: <Message URL>
 6. Combat Maps: <Message URL>
-7. Custom Aliases and Snippets <Message URL>
+7. Custom Aliases and Snippets: <Message URL>
 `=================================`
 
 1. __**The Basics**__
@@ -25,7 +25,7 @@ Arguments with spaces (such as spell names) should be wrapped in quotation marks
 Most official Avrae commands (those described in `!help`) have a long and short version. For example you can roll a stealth check by running either `!check stealth` or `!c stealth`. These will be represented in the format `![check|c]`.
 
 **Help**
-Avrae will DM you information about the specified command, or general information if no argument is supplied..
+Avrae will DM you information about the specified command, or general information if no argument is supplied.
 `!help`
 `!help <command name>`
 ex: `!help check`
@@ -48,6 +48,16 @@ Examples include:
 
 
 
+`=================================`
+1. The Basics: <Message URL>
+2. __Character Management__: <Message URL>
+3. Checks, Saves, Attacks, Spells: <Message URL>
+4. Combat: <Message URL>
+5. DM Specific Commands: <Message URL>
+6. Combat Maps: <Message URL>
+7. Custom Aliases and Snippets: <Message URL>
+`=================================`
+
 2. __**Character Management**__
 
 **Selecting a Character**
@@ -57,17 +67,26 @@ Examples include:
 `!update`
 
 **Modify your HP**
-`![game|g] hp [+|-]#`
+`!game hp [+|-]#`
 
 **Modify Spell Slots**
-`![game|g] [spellslot|ss] <slot level> [+|-]#`
+`!g [spellslot|ss] <slot level> [+|-]#`
 ex: `!g ss 2 +1` - Restore one 2nd level slot
 
 **Resting**
-`![game|g] [shortrest|sr]`
-`![game|g] [longrest|lr]`
+`!g [shortrest|sr]`
+`!g [longrest|lr]`
 
 
+`=================================`
+1. The Basics: <Message URL>
+2. Character Management: <Message URL>
+3. __Checks, Saves, Attacks, Spells__: <Message URL>
+4. Basic Combat: <Message URL>
+5. DM Specific Commands: <Message URL>
+6. Combat Maps: <Message URL>
+7. Custom Aliases and Snippets <Message URL>
+`=================================`
 
 3. __**Checks, Saves, Attacks, Spells**__
 
@@ -97,6 +116,16 @@ Common arguments are:
 `!cast hex noconc` Casts the spell without concentration, useful for reapplying spells like Hex that can be moved around
 
 
+`=================================`
+1. The Basics: <Message URL>
+2. Character Management: <Message URL>
+3. Checks, Saves, Attacks, Spells: <Message URL>
+4. __Combat__: <Message URL>
+5. DM Specific Commands: <Message URL>
+6. Combat Maps: <Message URL>
+7. Custom Aliases and Snippets <Message URL>
+`=================================`
+
 4. __**Combat**__
 
 **Joining an Existing Combat**
@@ -104,75 +133,93 @@ Common arguments are:
 ex: `!i join`
 
 **Attack a Target**
-`![init|i] [attack|a] <attack name> <-t target name>`
+`!i [attack|a] <attack name> <-t target name>`
 ex: `!i a dagger -t goblin`
 
 **Cast a Spell at a Target or Targets**
-`![init|i] <cast> <spell name> <-t target name> [-t target name] [-t target name]...`
+`!i <cast> <spell name> <-t target name> [-t target name] [-t target name]...`
 ex: `!i cast bless -t jim -t billy -t mary`
 
 **Attack of Opportunity**
-`![init|i] aoo <attacker> <attack> <-t target>`
+`!i aoo <attacker> <attack> <-t target>`
 ex: `!i aoo jim dagger -t goblin`
 
 **Cast a Spell as a Reaction**
-`![init|i] [reactcast|rc] <caster> <spell> [-t target]`
+`!i [reactcast|rc] <caster> <spell> [-t target]`
 ex: `!i rc billy "hellish rebuke" -t goblin`
 
 **End your Turn**
-`![init|i] [next|n]`
+`!i [next|n]`
 __Remember to end your turn when you are done!__
 
 **Create an Effect**
-`![init|i] effect <target> <effect name> [args]
+`!i effect <target> <effect name> [args]
 See `!help i effect` for information. Used to add a condition or other effect to a target when such an effect is not added automatically by the spell or attack that caused it.
 
 **Remove an Effect**
-`![init|i] re <target> [effect]`
+`!i re <target> [effect]`
 ex: `!i re jim prone`
 If no `[effect]` is provided, all effects will be removed from the target.
 
 **Edit a Combatant's Options**
-`![init|i] opt [args]`
+`!i opt [args]`
 See `!help i opt` for information. Used to set options such as Initiative placement, name, ac, max and current hp, etc.
 
+`=================================`
+1. The Basics: <Message URL>
+2. Character Management: <Message URL>
+3. Checks, Saves, Attacks, Spells: <Message URL>
+4. Combat: <Message URL>
+5. __DM Specific Commands__: <Message URL>
+6. Combat Maps: <Message URL>
+7. Custom Aliases and Snippets <Message URL>
+`=================================`
 
 5. __**DM Specific Commands**__
 
 **Begin Combat**
-`![init|i] begin`
+`!i begin`
 
 **Add Monsters to Combat**
-`![init|i] madd <monster name> [args]`
+`!i madd <monster name> [args]`
 Common args include `-n #` to add multiple and `-name <name>` to name the creature(s). Add `#` at the end of the custom name to automatically number them.
 ex: `!i madd golin -n 5 -name Goblin#`
 
 **Make Checks and Saves as Monsters**
-`![init|i] [check|save] [skill|ability]`
+`!i [check|save] [skill|ability]`
 Makes a check as the combatant whose turn it is in initiative.
 ex: `!i check perception` | `!i save wis`
 To make a save or check for one combatant while it's another combatant's turn, use `!i oc <name> <check>` or `!i os <name> <save>`
 
 **View a Monster's Attacks**
-'[init|i] a list`
+'!i a list`
 Shows a list of the current combatant's attacks. If the combatant is a monster, DMs you the list instead of posting in the combat channel.
 
 **Move Initiative**
-`![init|i] move [name|initiative count]`
+`!i move [name|initiative count]`
 Moves to the specified combatant or initiative count's turn.
 
-`![init|i] prev`
+`!i prev`
 Moves to the previous combatant's turn.
 
 **Remove a Combatant from Initiative**
-`![init|i] remove <name>`
+`!i remove <name>`
 Cannot be used on the combatant's turn who is being removed. Dead creatures are removed automatically at the end of their next turn following their death.
 
 **Reroll Initiative**
-`![init|i] reroll`
+`!i reroll`
 Rerolls the initiative counts of all combatants. Useful for starting a 'new' combat while keeping the same Map loaded (more on this later)
 
 
+`=================================`
+1. The Basics: <Message URL>
+2. Character Management: <Message URL>
+3. Checks, Saves, Attacks, Spells: <Message URL>
+4. Combat: <Message URL>
+5. DM Specific Commands: <Message URL>
+6. __Combat Maps__: <Message URL>
+7. Custom Aliases and Snippets <Message URL>
+`=================================`
 
 6. __**Combat Maps**__
 
@@ -220,6 +267,16 @@ There are far more commands that `!map` can perform than are practical to list h
 
 A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>.
 
+
+`=================================`
+1. The Basics: <Message URL>
+2. Character Management: <Message URL>
+3. Checks, Saves, Attacks, Spells: <Message URL>
+4. Combat: <Message URL>
+5. DM Specific Commands: <Message URL>
+6. Combat Maps: <Message URL>
+7. __Custom Aliases and Snippets__: <Message URL>
+`=================================`
 
 7. __**Custom Aliases and Snippets**__
 
