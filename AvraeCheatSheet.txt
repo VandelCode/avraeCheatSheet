@@ -265,7 +265,7 @@ Note: `!map -maplist` will show a list of several premade maps, ready to be load
 
 There are far more commands that `!map` can perform than are practical to list here. Browse the `!map help` text, and if you have any questions feel free to ask your fellow DMs.
 
-A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>.
+A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>'.
 
 
 `=================================`
