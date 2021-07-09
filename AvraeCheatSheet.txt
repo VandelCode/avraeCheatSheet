@@ -6,7 +6,8 @@ Avrae Cheat Sheet
 3. Checks, Saves, Attacks, Spells: <Message URL>
 4. Basic Combat: <Message URL>
 5. DM Specific Commands: <Message URL>
-6. Maps: <Message URL>
+6. Combat Maps: <Message URL>
+7. Custom Aliases and Snippets <Message URL>
 `=================================`
 
 1. __**The Basics**__
@@ -152,6 +153,10 @@ Makes a check as the combatant whose turn it is in initiative.
 ex: `!i check perception` | `!i save wis`
 To make a save or check for one combatant while it's another combatant's turn, use `!i oc <name> <check>` or `!i os <name> <save>`
 
+**View a Monster's Attacks**
+'[init|i] a list`
+Shows a list of the current combatant's attacks. If the combatant is a monster, DMs you the list instead of posting in the combat channel.
+
 **Move Initiative**
 `![init|i] move [name|initiative count]`
 Moves to the specified combatant or initiative count's turn.
@@ -196,7 +201,27 @@ An interesting command for handling complex movements, or when you know how far 
 ex: `!go 20n` Move your character's token 20 feet north.
 ex: `!go 5n5nw10e10s -t goblin` Moves the token "goblin" 5 feet north, 5 feet northwest, 10 feet east, then 10 feet south.
 
+`!view <topleft coordinate>:<bottom right coordinate>`
+Zooms the map to show only the space between the specified coordinates.
+If you're a player, please ask your DM before running this command.
 
+
+__For DMs__
+
+When setting up a map, you need to have a combatant in initiative for the `!map` alias to save the current setting to.
+This combatant must be named any of "Map", "DM", or "Lair".
+A common workflow when beginning combat with a map might look like this:
+`!i begin` - Start combat
+`!i add 0 Map -p 30` - Add a combatant named "Map" at initiative 30
+`!map -loadmap Forest` - Loads all the settings for a premade map named "Forest"
+Note: `!map -maplist` will show a list of several premade maps, ready to be loaded.
+
+There are far more commands that `!map` can perform than are practical to list here. Browse the `!map help` text, and if you have any questions feel free to ask your fellow DMs.
+
+A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>.
+
+
+7. __**Custom Aliases and Snippets**__
 
 **Aliases**
 User-made commands for Avrae are known as Aliases. They are used in the same way as any official command, and often contain their own help text accessible with `!aliasname help`.
