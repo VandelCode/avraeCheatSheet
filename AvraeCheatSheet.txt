@@ -1,13 +1,13 @@
 Avrae Cheat Sheet
 
 `=================================`
-1. __The Basics__: <Message URL>
-2. Character Management <Message URL>
-3. Checks, Saves, Attacks, Spells: <Message URL>
-4. Combat: <Message URL>
-5. DM Specific Commands: <Message URL>
-6. Combat Maps: <Message URL>
-7. Custom Aliases and Snippets: <Message URL>
+1. __The Basics__
+2. Character Management
+3. Checks, Saves, Attacks, Spells
+4. Combat
+5. DM Specific Commands
+6. Combat Maps
+7. Custom Aliases and Snippets
 `=================================`
 
 1. __**The Basics**__
@@ -45,17 +45,16 @@ Examples include:
 `-b #` Add a bonus to a roll
 `-d #` Add extra damage to a roll
 `-rr #` Roll multiple times (usually Extra Attack)
-
-
+` `
 
 `=================================`
-1. The Basics: <Message URL>
-2. __Character Management__: <Message URL>
-3. Checks, Saves, Attacks, Spells: <Message URL>
-4. Combat: <Message URL>
-5. DM Specific Commands: <Message URL>
-6. Combat Maps: <Message URL>
-7. Custom Aliases and Snippets: <Message URL>
+1. The Basics
+2. __Character Management__
+3. Checks, Saves, Attacks, Spells
+4. Combat
+5. DM Specific Commands
+6. Combat Maps
+7. Custom Aliases and Snippets
 `=================================`
 
 2. __**Character Management**__
@@ -76,16 +75,16 @@ ex: `!g ss 2 +1` - Restore one 2nd level slot
 **Resting**
 `!g [shortrest|sr]`
 `!g [longrest|lr]`
-
+` `
 
 `=================================`
-1. The Basics: <Message URL>
-2. Character Management: <Message URL>
-3. __Checks, Saves, Attacks, Spells__: <Message URL>
-4. Basic Combat: <Message URL>
-5. DM Specific Commands: <Message URL>
-6. Combat Maps: <Message URL>
-7. Custom Aliases and Snippets <Message URL>
+1. The Basics
+2. Character Management
+3. __Checks, Saves, Attacks, Spells__
+4. Basic Combat
+5. DM Specific Commands
+6. Combat Maps
+7. Custom Aliases and Snippets
 `=================================`
 
 3. __**Checks, Saves, Attacks, Spells**__
@@ -114,16 +113,16 @@ Common arguments are:
 `!cast fireball -l #` (lowercase L) - Casts the spell at given level
 `!cast fireball -i` Casts the spell without using a slot, ignoring all other requirements
 `!cast hex noconc` Casts the spell without concentration, useful for reapplying spells like Hex that can be moved around
-
+` `
 
 `=================================`
-1. The Basics: <Message URL>
-2. Character Management: <Message URL>
-3. Checks, Saves, Attacks, Spells: <Message URL>
-4. __Combat__: <Message URL>
-5. DM Specific Commands: <Message URL>
-6. Combat Maps: <Message URL>
-7. Custom Aliases and Snippets <Message URL>
+1. The Basics
+2. Character Management
+3. Checks, Saves, Attacks, Spells
+4. __Combat__
+5. DM Specific Commands
+6. Combat Maps
+7. Custom Aliases and Snippets
 `=================================`
 
 4. __**Combat**__
@@ -153,7 +152,7 @@ ex: `!i rc billy "hellish rebuke" -t goblin`
 __Remember to end your turn when you are done!__
 
 **Create an Effect**
-`!i effect <target> <effect name> [args]
+`!i effect <target> <effect name> [args]`
 See `!help i effect` for information. Used to add a condition or other effect to a target when such an effect is not added automatically by the spell or attack that caused it.
 
 **Remove an Effect**
@@ -164,15 +163,16 @@ If no `[effect]` is provided, all effects will be removed from the target.
 **Edit a Combatant's Options**
 `!i opt [args]`
 See `!help i opt` for information. Used to set options such as Initiative placement, name, ac, max and current hp, etc.
+` `
 
 `=================================`
-1. The Basics: <Message URL>
-2. Character Management: <Message URL>
-3. Checks, Saves, Attacks, Spells: <Message URL>
-4. Combat: <Message URL>
-5. __DM Specific Commands__: <Message URL>
-6. Combat Maps: <Message URL>
-7. Custom Aliases and Snippets <Message URL>
+1. The Basics
+2. Character Management
+3. Checks, Saves, Attacks, Spells
+4. Combat
+5. __DM Specific Commands__
+6. Combat Maps
+7. Custom Aliases and Snippets
 `=================================`
 
 5. __**DM Specific Commands**__
@@ -192,7 +192,7 @@ ex: `!i check perception` | `!i save wis`
 To make a save or check for one combatant while it's another combatant's turn, use `!i oc <name> <check>` or `!i os <name> <save>`
 
 **View a Monster's Attacks**
-'!i a list`
+`!i a list`
 Shows a list of the current combatant's attacks. If the combatant is a monster, DMs you the list instead of posting in the combat channel.
 
 **Move Initiative**
@@ -209,16 +209,16 @@ Cannot be used on the combatant's turn who is being removed. Dead creatures are 
 **Reroll Initiative**
 `!i reroll`
 Rerolls the initiative counts of all combatants. Useful for starting a 'new' combat while keeping the same Map loaded (more on this later)
-
+` `
 
 `=================================`
-1. The Basics: <Message URL>
-2. Character Management: <Message URL>
-3. Checks, Saves, Attacks, Spells: <Message URL>
-4. Combat: <Message URL>
-5. DM Specific Commands: <Message URL>
-6. __Combat Maps__: <Message URL>
-7. Custom Aliases and Snippets <Message URL>
+1. The Basics
+2. Character Management
+3. Checks, Saves, Attacks, Spells
+4. Combat
+5. DM Specific Commands
+6. __Combat Maps__
+7. Custom Aliases and Snippets
 `=================================`
 
 6. __**Combat Maps**__
@@ -255,7 +255,6 @@ ex: `!go 5n5nw10e10s -t goblin` Moves the token "goblin" 5 feet north, 5 feet no
 **Adjust the Map View**
 `!view <topleft coordinate>:<bottom right coordinate>`
 Zooms the map to show only the space between the specified coordinates.
-If you're a player, please ask your DM before running this command.
 
 **Display Area Spell Effects**
 `!se <name of spell> [aim] [-t target] [-n]`
@@ -265,7 +264,7 @@ Creates an Overlay on the map, based on a preset list of spells.
 `[-t target]` is used in this context to attach the overlay settings to a different combatant than your current one. If for some reason your character creates an overlay when it is not their turn, use this to target your character.
 `[-n]` prevents the overlay settings from attaching, useful for showing the area of instantaneous effects like a Fireball.
 ex: `!se "Cone of Cold" goblin1 -n` - Displays an overlay for Cone of Cold, emitting from your character's coordinate towards "goblin1's" coordinate. The overlay will not persist the next time the map is shown.
-
+` `
 
 __For DMs__
 
@@ -279,17 +278,17 @@ Note: `!map -maplist` will show a list of several premade maps, ready to be load
 
 There are far more commands that `!map` can perform than are practical to list here. Browse the `!map help` text, and if you have any questions feel free to ask your fellow DMs.
 
-A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>'.
-
+A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>`.
+` `
 
 `=================================`
-1. The Basics: <Message URL>
-2. Character Management: <Message URL>
-3. Checks, Saves, Attacks, Spells: <Message URL>
-4. Combat: <Message URL>
-5. DM Specific Commands: <Message URL>
-6. Combat Maps: <Message URL>
-7. __Custom Aliases and Snippets__: <Message URL>
+1. The Basics
+2. Character Management
+3. Checks, Saves, Attacks, Spells
+4. Combat
+5. DM Specific Commands
+6. Combat Maps
+7. __Custom Aliases and Snippets__
 `=================================`
 
 7. __**Custom Aliases and Snippets**__
@@ -308,4 +307,3 @@ A Personal Alias will take precedence over a Server Alias, if they are different
 
 **Snippets**
 Similar to an Alias, a Snippet is a User-made argument. Like Aliases, Snippets can be either Personal or Server.
-
