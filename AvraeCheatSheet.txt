@@ -1,17 +1,20 @@
 Avrae Cheat Sheet
 
-`=================================`
-1. __The Basics__
+——— __**Table of Contents**__ ———
+1. The Basics
 2. Character Management
 3. Checks, Saves, Attacks, Spells
 4. Combat
 5. DM Specific Commands
 6. Combat Maps
 7. Custom Aliases and Snippets
-`=================================`
-
-1. __**The Basics**__
-
+———————————————
+```
+ 
+```
+————————————————————
+——————   __**1. The Basics**__    ——————
+————————————————————
 **Command Format**
 All Avrae commands follow this format:
 `!command argument [optional argument] <required argument> "argument with spaces"`
@@ -45,19 +48,12 @@ Examples include:
 `-b #` Add a bonus to a roll
 `-d #` Add extra damage to a roll
 `-rr #` Roll multiple times (usually Extra Attack)
-` `
-
-`=================================`
-1. The Basics
-2. __Character Management__
-3. Checks, Saves, Attacks, Spells
-4. Combat
-5. DM Specific Commands
-6. Combat Maps
-7. Custom Aliases and Snippets
-`=================================`
-
-2. __**Character Management**__
+```
+ 
+```
+————————————————————
+———   __**2. Character Management**__    ———
+————————————————————
 
 **Selecting a Character**
 `!char <character name>`
@@ -87,7 +83,9 @@ ex: `!g ss 2 +1` - Restore one 2nd level slot
 7. Custom Aliases and Snippets
 `=================================`
 
-3. __**Checks, Saves, Attacks, Spells**__
+————————————————————
+—— __**3. Checks, Saves, Attacks, Spells**__ ——
+————————————————————
 
 Note: Many arguments can be abbreviated and Avrae will use the closest match. For example:
 `!save Dexterity` = `!save dex`
