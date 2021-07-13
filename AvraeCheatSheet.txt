@@ -10,7 +10,9 @@ Avrae Cheat Sheet
 7. Custom Aliases and Snippets
 `=================================`
 
-1. __**The Basics**__
+————————————————————
+——————    __**1. The Basics**__     ——————
+————————————————————
 
 **Command Format**
 All Avrae commands follow this format:
@@ -51,7 +53,9 @@ Examples include:
  
 ```
 
-2. __**Character Management**__
+————————————————————
+———    __**2. Character Management**__     ———
+————————————————————
 
 **Selecting a Character**
 `!char <character name>`
@@ -77,7 +81,9 @@ Instead use `!rest short #' where # is how many of your Hit Dice you are spendin
  
 ```
 
-3. __**Checks, Saves, Attacks, Spells**__
+————————————————————
+——   __**3. Checks, Saves, Attacks, Spells**__   ——
+————————————————————
 
 Note: Many arguments can be abbreviated and Avrae will use the closest match. For example:
 `!save Dexterity` = `!save dex`
@@ -109,7 +115,9 @@ Common arguments are:
  
 ```
 
-4. __**Combat**__
+————————————————————
+———————  __**4. Combat**__   ———————
+————————————————————
 
 **Joining an Existing Combat**
 `![init|i] <join>`
@@ -153,7 +161,9 @@ See `!help i opt` for information. Used to set options such as Initiative placem
  
 ```
 
-5. __**DM Specific Commands**__
+————————————————————
+———    __**5. DM Specific Commands**__     ———
+————————————————————
 
 **Begin Combat**
 `!i begin`
@@ -193,7 +203,9 @@ Rerolls the initiative counts of all combatants. Useful for starting a 'new' com
  
 ```
 
-6. __**Combat Maps**__
+————————————————————
+—————     __**6. Combat Maps**__      —————
+————————————————————
 
 In combat, the `!map` alias is a powerful tool for keeping track of where combatants are in relation to each other, and can help to immerse players by providing a visual aid.
 
@@ -257,7 +269,9 @@ A good tip for beginners: Start combat in your DM channel and play around with t
  
 ```
 
-7. __**Custom Aliases and Snippets**__
+————————————————————
+——   __**7. Custom Aliases and Snippets**__    ——
+————————————————————
 
 **Aliases**
 User-made commands for Avrae are known as Aliases. They are used in the same way as any official command, and often contain their own help text accessible with `!aliasname help`.
