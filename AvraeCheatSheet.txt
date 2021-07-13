@@ -1,7 +1,7 @@
 Avrae Cheat Sheet
 
 `=================================`
-1. __The Basics__
+1. The Basics
 2. Character Management
 3. Checks, Saves, Attacks, Spells
 4. Combat
@@ -47,15 +47,9 @@ Examples include:
 `-rr #` Roll multiple times (usually Extra Attack)
 ` `
 
-`=================================`
-1. The Basics
-2. __Character Management__
-3. Checks, Saves, Attacks, Spells
-4. Combat
-5. DM Specific Commands
-6. Combat Maps
-7. Custom Aliases and Snippets
-`=================================`
+```
+ 
+```
 
 2. __**Character Management**__
 
@@ -75,17 +69,13 @@ ex: `!g ss 2 +1` - Restore one 2nd level slot
 **Resting**
 `!g [shortrest|sr]`
 `!g [longrest|lr]`
+*Note:* The built-in short rest command does not provide a way to spend Hit Dice for healing.
+Instead use `!rest short #' where # is how many of your Hit Dice you are spending.
 ` `
 
-`=================================`
-1. The Basics
-2. Character Management
-3. __Checks, Saves, Attacks, Spells__
-4. Basic Combat
-5. DM Specific Commands
-6. Combat Maps
-7. Custom Aliases and Snippets
-`=================================`
+```
+ 
+```
 
 3. __**Checks, Saves, Attacks, Spells**__
 
@@ -115,15 +105,9 @@ Common arguments are:
 `!cast hex noconc` Casts the spell without concentration, useful for reapplying spells like Hex that can be moved around
 ` `
 
-`=================================`
-1. The Basics
-2. Character Management
-3. Checks, Saves, Attacks, Spells
-4. __Combat__
-5. DM Specific Commands
-6. Combat Maps
-7. Custom Aliases and Snippets
-`=================================`
+```
+ 
+```
 
 4. __**Combat**__
 
@@ -165,15 +149,9 @@ If no `[effect]` is provided, all effects will be removed from the target.
 See `!help i opt` for information. Used to set options such as Initiative placement, name, ac, max and current hp, etc.
 ` `
 
-`=================================`
-1. The Basics
-2. Character Management
-3. Checks, Saves, Attacks, Spells
-4. Combat
-5. __DM Specific Commands__
-6. Combat Maps
-7. Custom Aliases and Snippets
-`=================================`
+```
+ 
+```
 
 5. __**DM Specific Commands**__
 
@@ -183,7 +161,7 @@ See `!help i opt` for information. Used to set options such as Initiative placem
 **Add Monsters to Combat**
 `!i madd <monster name> [args]`
 Common args include `-n #` to add multiple and `-name <name>` to name the creature(s). Add `#` at the end of the custom name to automatically number them.
-ex: `!i madd golin -n 5 -name Goblin#`
+ex: `!i madd goblin -n 5 -name Goblin#` - Adds five Goblins to initiative, naming them "Goblin1", "Goblin2", etc.
 
 **Make Checks and Saves as Monsters**
 `!i [check|save] [skill|ability]`
@@ -211,15 +189,9 @@ Cannot be used on the combatant's turn who is being removed. Dead creatures are 
 Rerolls the initiative counts of all combatants. Useful for starting a 'new' combat while keeping the same Map loaded (more on this later)
 ` `
 
-`=================================`
-1. The Basics
-2. Character Management
-3. Checks, Saves, Attacks, Spells
-4. Combat
-5. DM Specific Commands
-6. __Combat Maps__
-7. Custom Aliases and Snippets
-`=================================`
+```
+ 
+```
 
 6. __**Combat Maps**__
 
@@ -281,15 +253,9 @@ There are far more commands that `!map` can perform than are practical to list h
 A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>`.
 ` `
 
-`=================================`
-1. The Basics
-2. Character Management
-3. Checks, Saves, Attacks, Spells
-4. Combat
-5. DM Specific Commands
-6. Combat Maps
-7. __Custom Aliases and Snippets__
-`=================================`
+```
+ 
+```
 
 7. __**Custom Aliases and Snippets**__
 
