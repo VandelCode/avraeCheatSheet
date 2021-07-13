@@ -74,7 +74,7 @@ ex: `!g ss 2 +1` - Restore one 2nd level slot
 `!g [shortrest|sr]`
 `!g [longrest|lr]`
 *Note:* The built-in short rest command does not provide a way to spend Hit Dice for healing.
-Instead use `!rest short #' where # is how many of your Hit Dice you are spending.
+Instead use `!rest short #` where # is how many of your Hit Dice you are spending.
 ` `
 
 ```
