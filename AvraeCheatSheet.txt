@@ -47,7 +47,6 @@ Examples include:
 `-b #` Add a bonus to a roll
 `-d #` Add extra damage to a roll
 `-rr #` Roll multiple times (usually Extra Attack)
-` `
 
 ```
  
@@ -75,7 +74,6 @@ ex: `!g ss 2 +1` - Restore one 2nd level slot
 `!g [longrest|lr]`
 *Note:* The built-in short rest command does not provide a way to spend Hit Dice for healing.
 Instead use `!rest short #` where # is how many of your Hit Dice you are spending.
-` `
 
 ```
  
@@ -109,7 +107,6 @@ Common arguments are:
 `!cast fireball -l #` (lowercase L) - Casts the spell at given level
 `!cast fireball -i` Casts the spell without using a slot, ignoring all other requirements
 `!cast hex noconc` Casts the spell without concentration, useful for reapplying spells like Hex that can be moved around
-` `
 
 ```
  
@@ -155,7 +152,6 @@ If no `[effect]` is provided, all effects will be removed from the target.
 **Edit a Combatant's Options**
 `!i opt [args]`
 See `!help i opt` for information. Used to set options such as Initiative placement, name, ac, max and current hp, etc.
-` `
 
 ```
  
@@ -197,7 +193,6 @@ Cannot be used on the combatant's turn who is being removed. Dead creatures are 
 **Reroll Initiative**
 `!i reroll`
 Rerolls the initiative counts of all combatants. Useful for starting a 'new' combat while keeping the same Map loaded (more on this later)
-` `
 
 ```
  
@@ -235,7 +230,7 @@ Moves your character's token to the specified coordinates, or moves the targeted
 An interesting command for handling complex movements, or when you know how far and what direction you want to move, but you can't read the map coordinates. Movements can be chained.
 ex: `!go 20n` Move your character's token 20 feet north.
 ex: `!go 5n5nw10e10s -t goblin` Moves the token "goblin" 5 feet north, 5 feet northwest, 10 feet east, then 10 feet south.
-
+` `
 **Adjust the Map View**
 `!view <topleft coordinate>:<bottom right coordinate>`
 Zooms the map to show only the space between the specified coordinates.
@@ -248,7 +243,7 @@ Creates an Overlay on the map, based on a preset list of spells.
 `[-t target]` is used in this context to attach the overlay settings to a different combatant than your current one. If for some reason your character creates an overlay when it is not their turn, use this to target your character.
 `[-n]` prevents the overlay settings from attaching, useful for showing the area of instantaneous effects like a Fireball.
 ex: `!se "Cone of Cold" goblin1 -n` - Displays an overlay for Cone of Cold, emitting from your character's coordinate towards "goblin1's" coordinate. The overlay will not persist the next time the map is shown.
-` `
+
 
 __For DMs__
 
@@ -263,7 +258,6 @@ Note: `!map -maplist` will show a list of several premade maps, ready to be load
 There are far more commands that `!map` can perform than are practical to list here. Browse the `!map help` text, and if you have any questions feel free to ask your fellow DMs.
 
 A good tip for beginners: Start combat in your DM channel and play around with the commands there. Once you have a map set the way you want, you can `!map -savemap <name>`, then start combat in your combat channel and `!map -loadmap <name>`.
-` `
 
 ```
  
