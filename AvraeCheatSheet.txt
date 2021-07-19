@@ -52,6 +52,21 @@ Examples include:
  
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ————————————————————
 ———    __**2. Character Management**__     ———
 ————————————————————
@@ -78,6 +93,18 @@ Instead use `!rest short #` where # is how many of your Hit Dice you are spendin
 ```
  
 ```
+
+
+
+
+
+
+
+
+
+
+
+
 
 ————————————————————
 ——   __**3. Checks, Saves, Attacks, Spells**__   ——
@@ -111,6 +138,16 @@ Common arguments are:
 ```
  
 ```
+
+
+
+
+
+
+
+
+
+
 
 ————————————————————
 ———————  __**4. Combat**__   ———————
@@ -157,6 +194,16 @@ See `!help i opt` for information. Used to set options such as Initiative placem
  
 ```
 
+
+
+
+
+
+
+
+
+
+
 ————————————————————
 ———    __**5. DM Specific Commands**__     ———
 ————————————————————
@@ -198,6 +245,16 @@ Rerolls the initiative counts of all combatants. Useful for starting a 'new' com
  
 ```
 
+
+
+
+
+
+
+
+
+
+
 ————————————————————
 —————     __**6. Combat Maps**__      —————
 ————————————————————
@@ -231,6 +288,16 @@ An interesting command for handling complex movements, or when you know how far 
 ex: `!go 20n` Move your character's token 20 feet north.
 ex: `!go 5n5nw10e10s -t goblin` Moves the token "goblin" 5 feet north, 5 feet northwest, 10 feet east, then 10 feet south.
 ` `
+
+
+
+
+
+
+
+
+
+
 **Adjust the Map View**
 `!view <topleft coordinate>:<bottom right coordinate>`
 Zooms the map to show only the space between the specified coordinates.
@@ -262,6 +329,16 @@ A good tip for beginners: Start combat in your DM channel and play around with t
 ```
  
 ```
+
+
+
+
+
+
+
+
+
+
 
 ————————————————————
 ——   __**7. Custom Aliases and Snippets**__    ——
